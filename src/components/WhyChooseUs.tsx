@@ -51,7 +51,7 @@ const WhyChooseUs: React.FC = () => {
     <section className="py-16 bg-slate-50" id="about">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="ts-text-h2 font-bold text-black-lite mb-4">
+          <h2 className="ts-text-h2 font-bold text-black-lite mb-2">
             Why Choose Talent Source?
           </h2>
           <p className="ts-p-text text-black-lite max-w-2xl mx-auto">
