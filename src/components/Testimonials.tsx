@@ -22,10 +22,10 @@ const Testimonials: React.FC = () => {
     <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-black-lite mb-4">
+          <h2 className="ts-text-h2 font-bold text-black-lite mb-4">
             What Our Clients Say
           </h2>
-          <p className="text-xl text-black-lite max-w-2xl mx-auto">
+          <p className="ts-p-text text-black-lite max-w-2xl mx-auto">
             Success stories from professionals who found their dream jobs through Talent Source
           </p>
         </div>
@@ -43,7 +43,7 @@ const Testimonials: React.FC = () => {
                 ))}
               </div>
               
-              <blockquote className="text-xl md:text-2xl text-black-lite mb-8 leading-relaxed font-medium">
+              <blockquote className="ts-p-text md:text-2xl text-black-lite mb-8 leading-relaxed font-medium">
                 "{testimonials[currentIndex].content}"
               </blockquote>
               

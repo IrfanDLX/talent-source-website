@@ -92,11 +92,11 @@ const HowItWorks: React.FC<HowItWorksProps> = ({ audience = "employer" }) => {
     <section className="py-16 bg-white/60 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
+          <h2 className="ts-text-h2 font-bold text-black mb-4">
             How It Works for{" "}
             {audience === "employer" ? "Employers" : "Job Seekers"}
           </h2>
-          <p className="text-xl text-black-lite max-w-2xl mx-auto">
+          <p className="ts-p-text text-black-lite max-w-2xl mx-auto">
             {audience === "employer"
               ? "Streamline your hiring process in four simple steps"
               : "Your journey to career success in four simple steps"}
@@ -111,7 +111,7 @@ const HowItWorks: React.FC<HowItWorksProps> = ({ audience = "employer" }) => {
                 {index < steps.length - 1 && (
                   <div className="hidden lg:block absolute top-16 left-full w-full h-0.5 bg-gradient-to-r from-slate-200 to-transparent z-0"></div>
                 )}
-                <div className="relative bg-white/70 backdrop-blur-lg rounded-xl p-6 text-center border border-slate-100 hover:border-blue-200 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 z-10">
+                <div className="relative h-full bg-white/70 backdrop-blur-lg rounded-xl p-6 text-center border border-slate-100 hover:border-blue-200 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 z-10">
                   <div
                     className={`w-16 h-16 bg-slate-100 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}
                   >
@@ -122,10 +122,10 @@ const HowItWorks: React.FC<HowItWorksProps> = ({ audience = "employer" }) => {
                       Step {step.id}
                     </span>
                   </div> */}
-                  <h3 className="text-xl font-bold text-black mb-3 group-hover:text-primary transition-colors">
+                  <h3 className="ts-text-h3 font-bold text-black mb-3 group-hover:text-primary transition-colors">
                     {step.title}
                   </h3>
-                  <p className="text-black-lite leading-relaxed">
+                  <p className="ts-p-text text-black-lite leading-relaxed">
                     {step.description}
                   </p>
                 </div>

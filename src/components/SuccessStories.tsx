@@ -7,10 +7,10 @@ const SuccessStories: React.FC = () => {
     <section className="py-16 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
+          <h2 className="ts-text-h2 font-bold text-black mb-4">
             Success Stories
           </h2>
-          <p className="text-xl text-black-lite max-w-2xl mx-auto">
+          <p className="ts-p-text text-black-lite max-w-2xl mx-auto">
             Real people, real success stories. See how Talent Source transformed careers
           </p>
         </div>
@@ -37,7 +37,7 @@ const SuccessStories: React.FC = () => {
                     </div>
                   </div>
                   
-                  <h3 className="text-xl font-bold text-black mb-2">
+                  <h3 className="ts-p-text font-bold text-black mb-2">
                     {story.name}
                   </h3>
                   

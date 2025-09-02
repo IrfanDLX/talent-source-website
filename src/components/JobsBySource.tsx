@@ -17,10 +17,10 @@ const JobsBySource: React.FC = () => {
     <section className="py-16 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
+          <h2 className="ts-text-h2 font-bold text-black mb-4">
             Jobs by Source
           </h2>
-          <p className="text-xl text-black-lite max-w-2xl mx-auto">
+          <p className="ts-p-text text-black-lite max-w-2xl mx-auto">
             Find opportunities from your preferred job platforms
           </p>
         </div>
@@ -65,11 +65,11 @@ const JobsBySource: React.FC = () => {
                   </span>
                 </div>
 
-                <h3 className="text-md font-semibold text-black mb-2">
+                <h3 className="ts-p-text font-semibold text-black mb-2">
                   {job.title}
                 </h3>
 
-                <div className="text-md text-primary mb-3">
+                <div className="ts-p-text text-primary mb-3">
                   {job.company}
                 </div>
 
@@ -84,7 +84,7 @@ const JobsBySource: React.FC = () => {
                 </div>
 
                 {job.salary && (
-                  <div className="text-md text-black mb-2">
+                  <div className="ts-p-text text-black mb-2">
                     {job.salary}
                   </div>
                 )}

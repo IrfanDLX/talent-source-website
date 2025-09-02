@@ -13,9 +13,14 @@ body {
     rgba(13, 17, 28, 0) 60%
   );
 }
-.text-md {
-  font-size: 1rem;
-  line-height: 1.25rem;
+.ts-text-p {
+  font-size: 0.875rem;
+  line-height: 1rem;
+}
+
+.ts-text-h2 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 @layer utilities {
   .no-scrollbar::-webkit-scrollbar {
@@ -32,4 +37,15 @@ body {
            transition-colors duration-200 ease-in-out
            transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl;
   }
+}
+
+@media (min-width: 768px) {
+  .ts-text-h2 {
+    font-size: 1.75rem;
+    line-height: 2rem;
+  }
+  .ts-text-p {
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
 }

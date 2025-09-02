@@ -26,7 +26,7 @@ const Hero: React.FC = () => {
   //           <br />
   //           With Elite Opportunities
   //         </h1>
-  //         <p className="text-xl md:text-2xl mb-10 text-blue-100 max-w-3xl mx-auto leading-relaxed">
+  //         <p className="ts-text-p md:text-2xl mb-10 text-blue-100 max-w-3xl mx-auto leading-relaxed">
   //           Connect with top employers and discover career opportunities that
   //           match your ambitions. Your next career move starts here.
   //         </p>
@@ -73,19 +73,19 @@ const Hero: React.FC = () => {
   //         {/* Stats */}
   //         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
   //           <div className="text-center">
-  //             <div className="text-3xl md:text-4xl font-bold text-white mb-2">
+  //             <div className="ts-text-h2 font-bold text-white mb-2">
   //               10,000+
   //             </div>
   //             <div className="text-blue-100 text-lg">Active Job Listings</div>
   //           </div>
   //           <div className="text-center">
-  //             <div className="text-3xl md:text-4xl font-bold text-white mb-2">
+  //             <div className="ts-text-h2 font-bold text-white mb-2">
   //               500+
   //             </div>
   //             <div className="text-blue-100 text-lg">Trusted Companies</div>
   //           </div>
   //           <div className="text-center">
-  //             <div className="text-3xl md:text-4xl font-bold text-white mb-2">
+  //             <div className="ts-text-h2 font-bold text-white mb-2">
   //               95%
   //             </div>
   //             <div className="text-blue-100 text-lg">Success Rate</div>
@@ -101,7 +101,7 @@ const Hero: React.FC = () => {
       <div className="relative z-10 max-w-7xl mx-auto py-20 text-left px-4 sm:px-6 lg:px-8">
         <div className="">
           {/* <!-- Main Heading --> */}
-          <h1 className="text-3xl md:text-4xl font-extrabold leading-tight text-white mb-4">
+          <h1 className="ts-text-h2 font-extrabold leading-tight text-white mb-4">
             Find Your Dream Job <br />
             With Elite Opportunities
           </h1>
