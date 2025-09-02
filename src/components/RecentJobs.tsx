@@ -74,45 +74,43 @@ const RecentJobs: React.FC = () => {
             {recentJobs.map((job) => (
               <div
                 key={job.id}
-                className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 p-6 border border-slate-100 hover:border-blue-200 transform hover:-translate-y-1"
+                className="flex flex-col justify-between bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 p-6 border border-slate-100 hover:border-blue-200 transform hover:-translate-y-1"
                 style={{ minWidth: "320px", maxWidth: "320px" }}
               >
-                <div className="flex items-start justify-between mb-4">
-                  <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center text-primary font-semibold text-lg">
-                    {job.company.charAt(0)}
+                <div>
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center text-primary font-semibold text-lg">
+                      {job.company.charAt(0)}
+                    </div>
+                    <span className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full font-medium">
+                      {job.type}
+                    </span>
                   </div>
-                  <span className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full font-medium">
-                    {job.type}
-                  </span>
-                </div>
 
-                <h3 className="text-xl font-bold text-black mb-2 line-clamp-2">
-                  {job.title}
-                </h3>
+                  <h3 className="text-md font-semibold text-black mb-1 line-clamp-2">
+                    {job.title}
+                  </h3>
 
-                <div className="text-lg font-semibold text-primary mb-3">
-                  {job.company}
-                </div>
+                  <div className="text-md text-primary mb-3">{job.company}</div>
 
-                <div className="flex items-center text-black-lite mb-2">
-                  <MapPin className="h-4 w-4 mr-2 flex-shrink-0" />
-                  <span className="text-sm">{job.location}</span>
-                </div>
-
-                <div className="flex items-center text-black-lite mb-4">
-                  <Clock className="h-4 w-4 mr-2 flex-shrink-0" />
-                  <span className="text-sm">{job.postedDate}</span>
-                </div>
-
-                {job.salary && (
-                  <div className="text-lg font-semibold text-black mb-4">
-                    {job.salary}
+                  <div className="flex items-center text-black-lite mb-2">
+                    <MapPin className="h-4 w-4 mr-2 flex-shrink-0" />
+                    <span className="text-sm">{job.location}</span>
                   </div>
-                )}
 
-                <p className="text-black-lite text-sm mb-6 line-clamp-3">
-                  {job.description}
-                </p>
+                  <div className="flex items-center text-black-lite mb-4">
+                    <Clock className="h-4 w-4 mr-2 flex-shrink-0" />
+                    <span className="text-sm">{job.postedDate}</span>
+                  </div>
+
+                  {job.salary && (
+                    <div className="text-md text-black mb-2">{job.salary}</div>
+                  )}
+
+                  <p className="text-black-lite text-sm mb-6 line-clamp-3">
+                    {job.description}
+                  </p>
+                </div>
 
                 <div className="flex items-center justify-end">
                   {/* <span className="text-xs bg-slate-100 text-black-lite px-2 py-1 rounded font-medium">
