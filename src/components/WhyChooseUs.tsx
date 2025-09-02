@@ -51,10 +51,10 @@ const WhyChooseUs: React.FC = () => {
     <section className="py-16 bg-slate-50" id="about">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-black-lite mb-4">
             Why Choose Talent Source?
           </h2>
-          <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+          <p className="text-xl text-black-lite max-w-2xl mx-auto">
             We're committed to connecting talent with opportunity through innovative solutions and unmatched service
           </p>
         </div>
@@ -72,11 +72,11 @@ const WhyChooseUs: React.FC = () => {
                   <IconComponent className="h-6 w-6 text-white" />
                 </div>
                 
-                <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-800 transition-colors">
+                <h3 className="text-xl font-bold text-black-lite mb-3 group-hover:text-primary transition-colors">
                   {benefit.title}
                 </h3>
                 
-                <p className="text-slate-600 leading-relaxed">
+                <p className="text-black-lite leading-relaxed">
                   {benefit.description}
                 </p>
               </div>
@@ -96,7 +96,7 @@ const WhyChooseUs: React.FC = () => {
               <button className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
                 Create Free Account
               </button>
-              <button className="border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-colors">
+              <button className="border-2 border-white text-white hover:bg-white hover:text-black-lite px-8 py-3 rounded-lg font-semibold transition-colors">
                 Browse Jobs Now
               </button>
             </div>

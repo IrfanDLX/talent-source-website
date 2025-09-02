@@ -2,13 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: var(--app-font-family);
+}
+.hero-bg {
+  background-color: #0d111c;
+  background-image: radial-gradient(
+    circle at 150% 50%,
+    var(--primary) 0%,
+    rgba(13, 17, 28, 0) 60%
+  );
+}
 
 @layer utilities {
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
   .no-scrollbar {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  .btn-contained {
+    @apply bg-gradient-to-r from-primary-500 to-primary-600 
+           hover:from-primary-600 hover:to-primary-700
+           text-white font-medium rounded-lg font-semibold
+           transition-colors duration-200 ease-in-out
+           transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl;
   }
 }

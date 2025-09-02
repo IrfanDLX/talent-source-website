@@ -9,26 +9,25 @@ const Footer: React.FC = () => {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center mb-4">
-              <Search className="h-8 w-8 text-amber-500" />
-              <span className="ml-2 text-2xl font-bold">
-                Talent <span className="text-amber-500">Source</span>
+              <span className="text-2xl font-bold text-white">
+                Talent Source
               </span>
             </div>
-            <p className="text-slate-300 mb-4 leading-relaxed">
+            <p className="text-white-lite mb-4 leading-relaxed">
               Connecting exceptional talent with extraordinary opportunities. 
               Your career success is our mission.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-slate-300 hover:text-white transition-colors">
+              <a href="#" className="text-white hover:text-white transition-colors">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="text-slate-300 hover:text-white transition-colors">
+              <a href="#" className="text-white hover:text-white transition-colors">
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="#" className="text-slate-300 hover:text-white transition-colors">
+              <a href="#" className="text-white hover:text-white transition-colors">
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="#" className="text-slate-300 hover:text-white transition-colors">
+              <a href="#" className="text-white hover:text-white transition-colors">
                 <Instagram className="h-5 w-5" />
               </a>
             </div>
@@ -38,11 +37,11 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Job Seekers</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-slate-300 hover:text-white transition-colors">Browse Jobs</a></li>
-              <li><a href="#" className="text-slate-300 hover:text-white transition-colors">Career Advice</a></li>
-              <li><a href="#" className="text-slate-300 hover:text-white transition-colors">Interview Tips</a></li>
-              <li><a href="#" className="text-slate-300 hover:text-white transition-colors">Temping</a></li>
-              <li><a href="#" className="text-slate-300 hover:text-white transition-colors">Training Source</a></li>
+              <li><a href="#" className="text-white-lite hover:text-white transition-colors">Browse Jobs</a></li>
+              <li><a href="#" className="text-white-lite hover:text-white transition-colors">Career Advice</a></li>
+              <li><a href="#" className="text-white-lite hover:text-white transition-colors">Interview Tips</a></li>
+              <li><a href="#" className="text-white-lite hover:text-white transition-colors">Temping</a></li>
+              <li><a href="#" className="text-white-lite hover:text-white transition-colors">Training Source</a></li>
             </ul>
           </div>
 
@@ -50,11 +49,11 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Employers</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-slate-300 hover:text-white transition-colors">Post a Job</a></li>
-              <li><a href="#" className="text-slate-300 hover:text-white transition-colors">Find Candidates</a></li>
-              <li><a href="#" className="text-slate-300 hover:text-white transition-colors">Recruitment Solutions</a></li>
-              <li><a href="#" className="text-slate-300 hover:text-white transition-colors">Pricing Plans</a></li>
-              <li><a href="#" className="text-slate-300 hover:text-white transition-colors">Employer Resources</a></li>
+              <li><a href="#" className="text-white-lite hover:text-white transition-colors">Post a Job</a></li>
+              <li><a href="#" className="text-white-lite hover:text-white transition-colors">Find Candidates</a></li>
+              <li><a href="#" className="text-white-lite hover:text-white transition-colors">Recruitment Solutions</a></li>
+              <li><a href="#" className="text-white-lite hover:text-white transition-colors">Pricing Plans</a></li>
+              <li><a href="#" className="text-white-lite hover:text-white transition-colors">Employer Resources</a></li>
             </ul>
           </div>
 
@@ -63,12 +62,12 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
             <div className="space-y-3">
               <div className="flex items-center">
-                <Mail className="h-4 w-4 mr-2 text-amber-500 flex-shrink-0" />
-                <span className="text-slate-300">support@talentsource.com</span>
+                <Mail className="h-4 w-4 mr-2 text-white flex-shrink-0" />
+                <span className="text-white-lite">support@talentsource.com</span>
               </div>
               <div className="flex items-center">
-                <Phone className="h-4 w-4 mr-2 text-amber-500 flex-shrink-0" />
-                <span className="text-slate-300">+1 (555) 123-4567</span>
+                <Phone className="h-4 w-4 mr-2 text-white flex-shrink-0" />
+                <span className="text-white-lite">+1 (555) 123-4567</span>
               </div>
             </div>
             
@@ -90,17 +89,17 @@ const Footer: React.FC = () => {
 
         <div className="border-t border-slate-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-slate-300 text-sm">
+            <p className="text-white-lite text-sm">
               © 2024 Talent Source. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="text-slate-300 hover:text-white text-sm transition-colors">
+              <a href="#" className="text-white-lite hover:text-white text-sm transition-colors">
                 Privacy Policy
               </a>
-              <a href="#" className="text-slate-300 hover:text-white text-sm transition-colors">
+              <a href="#" className="text-white-lite hover:text-white text-sm transition-colors">
                 Terms of Service
               </a>
-              <a href="#" className="text-slate-300 hover:text-white text-sm transition-colors">
+              <a href="#" className="text-white-lite hover:text-white text-sm transition-colors">
                 Cookie Policy
               </a>
             </div>

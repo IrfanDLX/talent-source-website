@@ -7,10 +7,10 @@ const SuccessStories: React.FC = () => {
     <section className="py-16 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
             Success Stories
           </h2>
-          <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+          <p className="text-xl text-black-lite max-w-2xl mx-auto">
             Real people, real success stories. See how Talent Source transformed careers
           </p>
         </div>
@@ -37,25 +37,25 @@ const SuccessStories: React.FC = () => {
                     </div>
                   </div>
                   
-                  <h3 className="text-xl font-bold text-slate-900 mb-2">
+                  <h3 className="text-xl font-bold text-black mb-2">
                     {story.name}
                   </h3>
                   
                   <div className="flex items-center mb-4 text-sm">
-                    <span className="text-slate-600">{story.beforeRole}</span>
-                    <ArrowRight className="h-4 w-4 mx-2 text-amber-500" />
-                    <span className="text-blue-800 font-semibold">{story.afterRole}</span>
+                    <span className="text-black-lite">{story.beforeRole}</span>
+                    <ArrowRight className="h-4 w-4 mx-2 text-primary" />
+                    <span className="text-primary font-semibold">{story.afterRole}</span>
                   </div>
                   
-                  <div className="text-lg font-semibold text-blue-800 mb-3">
+                  <div className="text-lg font-semibold text-primary mb-3">
                     {story.company}
                   </div>
                   
-                  <p className="text-slate-600 mb-4 leading-relaxed">
+                  <p className="text-black-lite mb-4 leading-relaxed">
                     {story.story}
                   </p>
                   
-                  <div className="flex items-center text-slate-500 text-sm">
+                  <div className="flex items-center text-black-lite text-sm">
                     <Clock className="h-4 w-4 mr-1" />
                     <span>Success achieved in {story.timeframe}</span>
                   </div>
@@ -66,7 +66,7 @@ const SuccessStories: React.FC = () => {
         </div>
 
         <div className="text-center mt-12">
-          <button className="bg-slate-900 hover:bg-black text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+          <button className="btn-contained px-8 py-3">
             Read More Success Stories
           </button>
         </div>

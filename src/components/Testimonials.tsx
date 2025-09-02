@@ -22,10 +22,10 @@ const Testimonials: React.FC = () => {
     <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-black-lite mb-4">
             What Our Clients Say
           </h2>
-          <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+          <p className="text-xl text-black-lite max-w-2xl mx-auto">
             Success stories from professionals who found their dream jobs through Talent Source
           </p>
         </div>
@@ -43,7 +43,7 @@ const Testimonials: React.FC = () => {
                 ))}
               </div>
               
-              <blockquote className="text-xl md:text-2xl text-slate-700 mb-8 leading-relaxed font-medium">
+              <blockquote className="text-xl md:text-2xl text-black-lite mb-8 leading-relaxed font-medium">
                 "{testimonials[currentIndex].content}"
               </blockquote>
               
@@ -54,13 +54,13 @@ const Testimonials: React.FC = () => {
                   className="w-16 h-16 rounded-full mr-4 border-4 border-white shadow-lg"
                 />
                 <div className="text-left">
-                  <div className="font-bold text-slate-900 text-lg">
+                  <div className="font-bold text-black-lite text-lg">
                     {testimonials[currentIndex].name}
                   </div>
                   <div className="text-blue-800 font-semibold">
                     {testimonials[currentIndex].role}
                   </div>
-                  <div className="text-slate-600">
+                  <div className="text-black-lite">
                     {testimonials[currentIndex].company}
                   </div>
                 </div>
@@ -73,14 +73,14 @@ const Testimonials: React.FC = () => {
             onClick={prevTestimonial}
             className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 bg-white hover:bg-slate-50 p-3 rounded-full shadow-lg border border-slate-200 transition-all duration-200 hover:scale-110"
           >
-            <ChevronLeft className="h-6 w-6 text-slate-600" />
+            <ChevronLeft className="h-6 w-6 text-black-lite" />
           </button>
           
           <button
             onClick={nextTestimonial}
             className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 bg-white hover:bg-slate-50 p-3 rounded-full shadow-lg border border-slate-200 transition-all duration-200 hover:scale-110"
           >
-            <ChevronRight className="h-6 w-6 text-slate-600" />
+            <ChevronRight className="h-6 w-6 text-black-lite" />
           </button>
 
           {/* Dots indicator */}

@@ -7,10 +7,10 @@ const Blog: React.FC = () => {
     <section className="py-16 bg-slate-50" id="resources">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-black-lite mb-4">
             Career Resources & Insights
           </h2>
-          <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+          <p className="text-xl text-black-lite max-w-2xl mx-auto">
             Expert advice and actionable tips to accelerate your career growth
           </p>
         </div>
@@ -35,15 +35,15 @@ const Blog: React.FC = () => {
               </div>
               
               <div className="p-6">
-                <h3 className="text-xl font-bold text-slate-900 mb-3 leading-tight group-hover:text-blue-800 transition-colors">
+                <h3 className="text-xl font-bold text-black-lite mb-3 leading-tight group-hover:text-primary transition-colors">
                   {post.title}
                 </h3>
                 
-                <p className="text-slate-600 mb-4 leading-relaxed">
+                <p className="text-black-lite mb-4 leading-relaxed">
                   {post.excerpt}
                 </p>
                 
-                <div className="flex items-center justify-between text-sm text-slate-500 mb-4">
+                <div className="flex items-center justify-between text-sm text-black-lite mb-4">
                   <div className="flex items-center">
                     <Calendar className="h-4 w-4 mr-1" />
                     <span>{new Date(post.publishDate).toLocaleDateString()}</span>
@@ -55,10 +55,10 @@ const Blog: React.FC = () => {
                 </div>
                 
                 <div className="flex items-center justify-between">
-                  <span className="text-sm font-medium text-slate-700">
+                  <span className="text-sm font-medium text-black-lite">
                     By {post.author}
                   </span>
-                  <button className="flex items-center text-blue-800 hover:text-blue-900 font-medium text-sm group-hover:gap-2 transition-all">
+                  <button className="flex items-center text-primary hover:text-primary-700 font-medium text-sm group-hover:gap-2 transition-all">
                     Read More
                     <ArrowRight className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
                   </button>

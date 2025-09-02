@@ -21,10 +21,10 @@ const FeaturedCategories: React.FC = () => {
     <section className="py-16 bg-slate-50" id="categories">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-black-lite mb-4">
             Browse by Category
           </h2>
-          <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+          <p className="text-xl text-black-lite max-w-2xl mx-auto">
             Explore opportunities in your field of expertise
           </p>
         </div>
@@ -43,11 +43,11 @@ const FeaturedCategories: React.FC = () => {
                     <IconComponent className="h-8 w-8 text-white" />
                   </div>
                   
-                  <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-800 transition-colors">
+                  <h3 className="text-xl font-bold text-black-lite mb-2 group-hover:text-primary transition-colors">
                     {category.name}
                   </h3>
                   
-                  <p className="text-slate-600 text-sm mb-3 leading-relaxed">
+                  <p className="text-black-lite text-sm mb-3 leading-relaxed">
                     {category.description}
                   </p>
                   

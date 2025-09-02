@@ -25,10 +25,10 @@ const Contact: React.FC = () => {
     <section className="py-16 bg-white" id="contact">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-black-lite mb-4">
             Get in Touch
           </h2>
-          <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+          <p className="text-xl text-black-lite max-w-2xl mx-auto">
             Have questions or need support? We're here to help you succeed in your career journey
           </p>
         </div>
@@ -37,7 +37,7 @@ const Contact: React.FC = () => {
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-6">
+              <h3 className="text-2xl font-bold text-black-lite mb-6">
                 Contact Information
               </h3>
               
@@ -47,10 +47,10 @@ const Contact: React.FC = () => {
                     <Mail className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold text-slate-900 mb-1">Email</h4>
-                    <p className="text-slate-600">support@elitejobs.com</p>
-                    <p className="text-slate-600">support@talentsource.com</p>
-                    <p className="text-slate-600">careers@talentsource.com</p>
+                    <h4 className="text-lg font-semibold text-black-lite mb-1">Email</h4>
+                    <p className="text-black-lite">support@elitejobs.com</p>
+                    <p className="text-black-lite">support@talentsource.com</p>
+                    <p className="text-black-lite">careers@talentsource.com</p>
                   </div>
                 </div>
                 
@@ -59,9 +59,9 @@ const Contact: React.FC = () => {
                     <Phone className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold text-slate-900 mb-1">Phone</h4>
-                    <p className="text-slate-600">+1 (555) 123-4567</p>
-                    <p className="text-slate-600">+1 (555) 987-6543</p>
+                    <h4 className="text-lg font-semibold text-black-lite mb-1">Phone</h4>
+                    <p className="text-black-lite">+1 (555) 123-4567</p>
+                    <p className="text-black-lite">+1 (555) 987-6543</p>
                   </div>
                 </div>
                 
@@ -70,20 +70,20 @@ const Contact: React.FC = () => {
                     <MapPin className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold text-slate-900 mb-1">Office</h4>
-                    <p className="text-slate-600">123 Business Avenue</p>
-                    <p className="text-slate-600">San Francisco, CA 94105</p>
-                    <p className="text-slate-600">United States</p>
+                    <h4 className="text-lg font-semibold text-black-lite mb-1">Office</h4>
+                    <p className="text-black-lite">123 Business Avenue</p>
+                    <p className="text-black-lite">San Francisco, CA 94105</p>
+                    <p className="text-black-lite">United States</p>
                   </div>
                 </div>
               </div>
             </div>
 
             <div className="bg-gradient-to-br from-slate-50 to-blue-50 rounded-xl p-6 border border-blue-100">
-              <h4 className="text-lg font-semibold text-slate-900 mb-3">
+              <h4 className="text-lg font-semibold text-black-lite mb-3">
                 Business Hours
               </h4>
-              <div className="space-y-2 text-slate-600">
+              <div className="space-y-2 text-black-lite">
                 <div className="flex justify-between">
                   <span>Monday - Friday</span>
                   <span>9:00 AM - 6:00 PM</span>
@@ -102,13 +102,13 @@ const Contact: React.FC = () => {
 
           {/* Contact Form */}
           <div className="bg-slate-50 rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-slate-900 mb-6">
+            <h3 className="text-2xl font-bold text-black-lite mb-6">
               Send us a Message
             </h3>
             
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-2">
+                <label htmlFor="name" className="block text-sm font-medium text-black-lite mb-2">
                   Full Name *
                 </label>
                 <input
@@ -124,7 +124,7 @@ const Contact: React.FC = () => {
               </div>
               
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">
+                <label htmlFor="email" className="block text-sm font-medium text-black-lite mb-2">
                   Email Address *
                 </label>
                 <input
@@ -140,7 +140,7 @@ const Contact: React.FC = () => {
               </div>
               
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-2">
+                <label htmlFor="message" className="block text-sm font-medium text-black-lite mb-2">
                   Message *
                 </label>
                 <textarea
