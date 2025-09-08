@@ -4,7 +4,7 @@ import { blogPosts } from '../data/mockData';
 
 const Blog: React.FC = () => {
   return (
-    <section className="py-16 bg-slate-50" id="resources">
+    <section className="py-12 bg-slate-50" id="resources">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="ts-text-h2 font-bold text-black-lite mb-2">

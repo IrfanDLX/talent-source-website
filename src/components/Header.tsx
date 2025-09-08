@@ -51,7 +51,7 @@ const Header: React.FC = () => {
                     });
                   }
                 }}
-                className={`nav-item  ${active === item.id ? "active" : ""}`}
+                className={`nav-item text-black-lite ${active === item.id ? "active" : ""}`}
               >
                 {item.label}
               </a>

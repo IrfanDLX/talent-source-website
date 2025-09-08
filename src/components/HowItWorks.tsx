@@ -89,7 +89,7 @@ const HowItWorks: React.FC<HowItWorksProps> = ({ audience = "employer" }) => {
     audience === "employer" ? stepsForEmployers : stepsForJobSeekers;
 
   return (
-    <section className="py-16 bg-white/60 backdrop-blur-md">
+    <section className="py-12 bg-white/60 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="ts-text-h2 font-bold text-black mb-2">

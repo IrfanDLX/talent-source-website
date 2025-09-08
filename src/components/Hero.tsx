@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <main className="hero-bg min-h-[calc(100vh-120px)] flex items-center justify-start">
+    <main className="hero-bg min-h-[calc(100vh-200px)] flex items-center justify-start">
       <video autoPlay muted loop playsInline className="hero-video">
         <source
           src="https://talent-source-prod-bucket.lon1.digitaloceanspaces.com/assets/sale-page-banner-video.mp4"
