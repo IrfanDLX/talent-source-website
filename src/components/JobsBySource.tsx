@@ -53,7 +53,7 @@ const JobsBySource: React.FC = () => {
           {jobsToShow.map((job) => (
             <div
               key={job.id}
-              className="flex flex-col justify-between bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 p-6 border border-slate-100 hover:border-blue-200 transform hover:-translate-y-1"
+              className="flex flex-col justify-between bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 p-6 border border-slate-100 hover:border-gold-light transform hover:-translate-y-1"
             >
               <div>
                 <div className="flex items-start justify-between mb-4">

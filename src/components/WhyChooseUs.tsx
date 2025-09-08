@@ -66,7 +66,7 @@ const WhyChooseUs: React.FC = () => {
             return (
               <div
                 key={benefit.id}
-                className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-blue-200 group transform hover:-translate-y-1"
+                className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-gold-light group transform hover:-translate-y-1"
               >
                 <div className={`w-12 h-12 bg-gradient-to-br ${benefit.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
                   <IconComponent className="h-6 w-6 text-white" />

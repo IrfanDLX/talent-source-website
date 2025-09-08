@@ -4,6 +4,8 @@
   --color-primary: 0, 0, 128; /* #000080 as RGB */
   --secondary: #00008029;
   --light: #effdf5;
+  --light-gold: #fae8ad;
+  --dark-gold: #c58e38;
   --text-white-color: #ffffff;
   --text-black-color: #000000;
   --text-black-lite: #5a5a5a;
@@ -42,7 +44,6 @@
 .text-white-lite {
   color: var(--text-white-lite) !important;
 }
-
 
 .h1-font {
   font-family: var(--app-font-family);

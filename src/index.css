@@ -30,6 +30,11 @@ body {
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
   }
+  .nav-item {
+    @apply px-3 py-2 !text-sm !font-medium !font-normal rounded-lg;
+  }
+  .nav-item:hover,
+  .nav-item.active,
   .btn-contained {
     @apply bg-gradient-to-r from-primary-500 to-primary-600 
            hover:from-primary-600 hover:to-primary-700
@@ -45,7 +50,7 @@ body {
     line-height: 2rem;
   }
   .ts-text-p {
-  font-size: 1rem;
-  line-height: 1.25rem;
-}
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
 }

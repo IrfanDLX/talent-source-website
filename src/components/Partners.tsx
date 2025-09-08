@@ -1,7 +1,55 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { partnerCompanies } from "../data/mockData";
 
 const Partners: React.FC = () => {
+  const scrollRef = useRef(null);
+  const animationRef = useRef<number | null>(null);
+  const isHovered = useRef(false);
+  useEffect(() => {
+    const scrollContainer = scrollRef.current;
+    if (!scrollContainer) return;
+
+    const scrollSpeed = 0.5; // pixels per frame (smooth)
+    const autoScroll = () => {
+      if (!scrollContainer) return;
+
+      if (!isHovered.current) {
+        scrollContainer.scrollLeft += scrollSpeed;
+
+        // Loop back to start when reaching the end
+        if (
+          scrollContainer.scrollLeft + scrollContainer.clientWidth >=
+          scrollContainer.scrollWidth
+        ) {
+          scrollContainer.scrollLeft = 0;
+        }
+      }
+
+      animationRef.current = requestAnimationFrame(autoScroll);
+    };
+
+    animationRef.current = requestAnimationFrame(autoScroll);
+
+    // Pause on hover
+    const handleMouseEnter = () => {
+      isHovered.current = true;
+    };
+
+    // Resume on leave
+    const handleMouseLeave = () => {
+      isHovered.current = false;
+    };
+
+    scrollContainer.addEventListener("mouseenter", handleMouseEnter);
+    scrollContainer.addEventListener("mouseleave", handleMouseLeave);
+
+    return () => {
+      if (animationRef.current) cancelAnimationFrame(animationRef.current);
+      scrollContainer.removeEventListener("mouseenter", handleMouseEnter);
+      scrollContainer.removeEventListener("mouseleave", handleMouseLeave);
+    };
+  }, []);
+
   return (
     <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -14,10 +62,14 @@ const Partners: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
-          {partnerCompanies.map((company) => (
+        <div
+          ref={scrollRef}
+          className="grid grid-flow-col auto-cols-max gap-8 items-center p-4 overflow-x-auto no-scrollbar"
+          style={{ scrollBehavior: "auto" }}
+        >
+          {partnerCompanies.concat(partnerCompanies).map((company, index) => (
             <div
-              key={company.id}
+              key={index}
               className="flex items-center justify-center p-4 bg-slate-50 rounded-lg hover:bg-slate-100 transition-colors duration-200 group"
             >
               <img
@@ -39,7 +91,16 @@ const Partners: React.FC = () => {
               talent. Post your jobs and connect with qualified candidates
               today.
             </p>
-            <button className="btn-contained px-8 py-3">
+            <button
+              className="btn-contained px-8 py-3"
+              onClick={() => {
+                window.open(
+                  "https://www.talentsourceplatform.com/sales-page",
+                  "_blank",
+                  "noopener,noreferrer"
+                );
+              }}
+            >
               Become a Partner
             </button>
           </div>

@@ -20,15 +20,7 @@ function App() {
       <main>
         <Hero />
         <RecentJobs />
-        <JobsBySource />
-        {/* <FeaturedCategories /> */}
-        <HowItWorks />
-        {/* <WhyChooseUs /> */}
-        {/* <Testimonials /> */}
-        <SuccessStories />
         <Partners />
-        {/* <Blog /> */}
-        {/* <Contact /> */}
       </main>
       <Footer />
     </div>

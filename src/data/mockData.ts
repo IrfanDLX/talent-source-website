@@ -11,7 +11,7 @@ export const recentJobs: Job[] = [
   {
     id: "101",
     title: "Front Desk Receptionist",
-    company: "GrandView Hotel",
+    company: "Grand Hotel",
     location: "New York, NY",
     type: "Full-time",
     salary: "$35,000 - $45,000",
@@ -19,7 +19,7 @@ export const recentJobs: Job[] = [
       "Welcome guests, manage reservations, and ensure a smooth check-in/check-out experience.",
     source: "Hospitality",
     postedDate: "2 days ago",
-    logo: "https://images.pexels.com/photos/1055058/pexels-photo-1055058.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop",
+    logo: "https://img.pikbest.com/origin/09/34/43/59SpIkbEsTpiB.png!w700wp",
   },
 
   // ------------------- Warehouse & Logistics -------------------
@@ -34,7 +34,7 @@ export const recentJobs: Job[] = [
       "Pick, pack, and ship orders in a fast-paced warehouse environment.",
     source: "Warehouse & Logistics",
     postedDate: "3 days ago",
-    logo: "https://images.pexels.com/photos/4483777/pexels-photo-4483777.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop",
+    logo: "https://i.pinimg.com/originals/eb/82/ec/eb82ec16c6eed6c789712eff9472310c.jpg",
   },
 
   {
@@ -48,7 +48,7 @@ export const recentJobs: Job[] = [
       "Oversee construction crews, manage project timelines, and ensure compliance.",
     source: "Construction",
     postedDate: "5 days ago",
-    logo: "https://images.pexels.com/photos/2760241/pexels-photo-2760241.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7bIEvsxuIsMHDCpnqUdEc8trzQkJhgaZVGQ&s",
   },
 
   // ------------------- Healthcare -------------------
@@ -63,7 +63,7 @@ export const recentJobs: Job[] = [
       "Provide patient care, administer medications, and support physicians.",
     source: "Healthcare",
     postedDate: "2 days ago",
-    logo: "https://images.pexels.com/photos/6129504/pexels-photo-6129504.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSosk3ed9fw0ZGRArsfI1ukT1v3gFthD4tmtg&s",
   },
 
   {
@@ -77,7 +77,7 @@ export const recentJobs: Job[] = [
       "Maintain cleanliness of guest rooms and ensure a welcoming environment.",
     source: "Hospitality",
     postedDate: "4 days ago",
-    logo: "https://images.pexels.com/photos/3771095/pexels-photo-3771095.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop",
+    logo: "https://thumbs.dreamstime.com/b/seaside-hotel-logo-palm-trees-sun-blue-yellow-emblem-vector-template-93787519.jpg",
   },
   {
     id: "202",
@@ -90,7 +90,7 @@ export const recentJobs: Job[] = [
       "Operate forklifts to load and unload inventory safely and efficiently.",
     source: "Warehouse & Logistics",
     postedDate: "1 week ago",
-    logo: "https://images.pexels.com/photos/4484077/pexels-photo-4484077.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop",
+    logo: "https://images.seeklogo.com/logo-png/24/2/speedy-logo-png_seeklogo-246686.png",
   },
 
   {
@@ -104,7 +104,7 @@ export const recentJobs: Job[] = [
       "Provide excellent dining service, take orders, and maintain customer satisfaction.",
     source: "Hospitality",
     postedDate: "1 day ago",
-    logo: "https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6pGB0ZyEy0NBs1sOigh4GZwf9B0f90OeCMw&s",
   },
   // ------------------- Construction -------------------
   {
@@ -118,7 +118,7 @@ export const recentJobs: Job[] = [
       "Assist with site preparation, load/unload materials, and follow safety standards.",
     source: "Construction",
     postedDate: "3 days ago",
-    logo: "https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8r_9rdR_bbGqP6tQYCbcDKLBKR_6sHykn0Wc7i7adx11OT7tosNErC6ruM3YG85cUCsY&usqp=CAU",
   },
 
   {
@@ -132,7 +132,7 @@ export const recentJobs: Job[] = [
       "Deliver packages promptly and safely to customers within assigned routes.",
     source: "Warehouse & Logistics",
     postedDate: "5 days ago",
-    logo: "https://images.pexels.com/photos/4391470/pexels-photo-4391470.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8Gqg2bhV3hHwJ5nk37VCVibZS1TaREs27Bg&s",
   },
 
   {
@@ -146,12 +146,12 @@ export const recentJobs: Job[] = [
       "Assist doctors with patient prep, take vitals, and manage medical records.",
     source: "Healthcare",
     postedDate: "6 days ago",
-    logo: "https://images.pexels.com/photos/4586990/pexels-photo-4586990.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkn7Yosd95GREF3BXiTpR9wy_HK0Gdp8jT-w&s",
   },
   {
     id: "303",
     title: "Pharmacy Technician",
-    company: "City Pharmacy",
+    company: "Pharma City",
     location: "Phoenix, AZ",
     type: "Part-time",
     salary: "$18 - $22/hr",
@@ -159,13 +159,13 @@ export const recentJobs: Job[] = [
       "Prepare prescriptions, assist pharmacists, and manage inventory.",
     source: "Healthcare",
     postedDate: "1 week ago",
-    logo: "https://images.pexels.com/photos/5668859/pexels-photo-5668859.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop",
+    logo: "https://i.pinimg.com/474x/f6/ef/7f/f6ef7f5b9e9687ff25097daccd3d2630.jpg",
   },
 
   {
     id: "402",
     title: "Electrician Apprentice",
-    company: "Metro Power Solutions",
+    company: "Metro Power",
     location: "Seattle, WA",
     type: "Apprenticeship",
     salary: "$19 - $23/hr",
@@ -173,7 +173,7 @@ export const recentJobs: Job[] = [
       "Support senior electricians with installations, wiring, and maintenance tasks.",
     source: "Construction",
     postedDate: "2 days ago",
-    logo: "https://images.pexels.com/photos/585418/pexels-photo-585418.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-qKPTXy94LZuqDDvU_vKoQ65oy08Owz3CjQ&s",
   },
 ];
 

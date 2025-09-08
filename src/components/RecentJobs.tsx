@@ -74,15 +74,26 @@ const RecentJobs: React.FC = () => {
             {recentJobs.map((job) => (
               <div
                 key={job.id}
-                className="flex flex-col justify-between bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 p-6 border border-slate-100 hover:border-blue-200 transform hover:-translate-y-1"
+                className="flex flex-col justify-between bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 p-6 border border-slate-100 hover:border-gold-light transform hover:-translate-y-1"
                 style={{ minWidth: "320px", maxWidth: "320px" }}
               >
                 <div>
                   <div className="flex items-start justify-between mb-4">
-                    <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center text-primary font-semibold text-lg">
-                      {job.company.charAt(0)}
+                    <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center overflow-hidden">
+                      {job.logo ? (
+                        <img
+                          src={job.logo}
+                          alt={job.company}
+                          className="w-full h-full object-contain"
+                        />
+                      ) : (
+                        <span className="text-primary font-semibold text-lg">
+                          {job.company.charAt(0)}
+                        </span>
+                      )}
                     </div>
-                    <span className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full font-medium">
+
+                    <span className="text-xs bg-gold-light text-black-lite px-2 py-1 rounded-full font-medium">
                       {job.type}
                     </span>
                   </div>
@@ -91,7 +102,9 @@ const RecentJobs: React.FC = () => {
                     {job.title}
                   </h3>
 
-                  <div className="ts-p-text text-primary mb-3">{job.company}</div>
+                  <div className="ts-p-text text-primary mb-3">
+                    {job.company}
+                  </div>
 
                   <div className="flex items-center text-black-lite mb-2">
                     <MapPin className="h-4 w-4 mr-2 flex-shrink-0" />
@@ -104,7 +117,9 @@ const RecentJobs: React.FC = () => {
                   </div>
 
                   {job.salary && (
-                    <div className="ts-p-text text-black mb-2">{job.salary}</div>
+                    <div className="ts-p-text text-black mb-2">
+                      {job.salary}
+                    </div>
                   )}
 
                   <p className="text-black-lite text-sm mb-6 line-clamp-3">

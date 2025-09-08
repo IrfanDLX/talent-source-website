@@ -19,7 +19,7 @@ const Blog: React.FC = () => {
           {blogPosts.map((post) => (
             <article
               key={post.id}
-              className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden border border-slate-100 hover:border-blue-200 group cursor-pointer"
+              className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden border border-slate-100 hover:border-gold-light group cursor-pointer"
             >
               <div className="relative overflow-hidden">
                 <img

@@ -36,7 +36,7 @@ const FeaturedCategories: React.FC = () => {
             return (
               <div
                 key={category.id}
-                className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-blue-200 cursor-pointer group transform hover:-translate-y-2"
+                className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-gold-light cursor-pointer group transform hover:-translate-y-2"
               >
                 <div className="flex flex-col items-center text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">

@@ -1,9 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Search, Menu, X } from "lucide-react";
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [active, setActive] = useState("home");
 
+  const navItems = [
+    { id: "home", label: "Home", href: "#home" },
+    { id: "jobs", label: "Jobs", href: "#jobs" },
+    { id: "about", label: "About Us", href: "#about" },
+    { id: "contact", label: "Contact Us", href: "#contact" },
+  ];
+
+  useEffect(() => {
+    // 1️⃣ Set initial active from URL hash (if any)
+    const hash = window.location.hash.replace("#", "");
+    if (hash) {
+      setActive(hash);
+    }
+  }, []);
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -20,36 +35,27 @@ const Header: React.FC = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <a
-              href="#jobs"
-              className="text-black-lite hover:text-primary px-3 py-2 text-sm font-medium transition-colors"
-            >
-              Find Jobs
-            </a>
-            <a
-              href="#categories"
-              className="text-black-lite hover:text-primary px-3 py-2 text-sm font-medium transition-colors"
-            >
-              Categories
-            </a>
-            <a
-              href="#resources"
-              className="text-black-lite hover:text-primary px-3 py-2 text-sm font-medium transition-colors"
-            >
-              Resources
-            </a>
-            <a
-              href="#about"
-              className="text-black-lite hover:text-primary px-3 py-2 text-sm font-medium transition-colors"
-            >
-              About
-            </a>
-            <a
-              href="#contact"
-              className="text-black-lite hover:text-primary px-3 py-2 text-sm font-medium transition-colors"
-            >
-              Contact
-            </a>
+            {navItems.map((item) => (
+              <a
+                key={item.id}
+                href={item.href}
+                onClick={(e) => {
+                  e.preventDefault(); // prevent default jump
+                  setActive(item.id); // set active immediately
+
+                  const section = document.querySelector(item.href);
+                  if (section) {
+                    section.scrollIntoView({
+                      behavior: "smooth",
+                      block: "start",
+                    });
+                  }
+                }}
+                className={`nav-item  ${active === item.id ? "active" : ""}`}
+              >
+                {item.label}
+              </a>
+            ))}
           </nav>
 
           {/* CTA Buttons */}
@@ -58,7 +64,7 @@ const Header: React.FC = () => {
               Sign In
             </button>
             <button className="btn-contained px-6 py-2 text-sm font-medium">
-              Post A Job
+              Hire & Partner
             </button>
           </div>
 
@@ -82,41 +88,35 @@ const Header: React.FC = () => {
           <div className="md:hidden border-t border-slate-200">
             <div className="px-2 pt-2 pb-3 space-y-1">
               <a
-                href="#jobs"
+                href="#"
                 className="block px-3 py-2 text-black-lite hover:text-primary text-sm font-medium"
               >
-                Find Jobs
+                Home
               </a>
               <a
-                href="#categories"
+                href="#job"
                 className="block px-3 py-2 text-black-lite hover:text-primary text-sm font-medium"
               >
-                Categories
-              </a>
-              <a
-                href="#resources"
-                className="block px-3 py-2 text-black-lite hover:text-primary text-sm font-medium"
-              >
-                Resources
+                Jobs
               </a>
               <a
                 href="#about"
                 className="block px-3 py-2 text-black-lite hover:text-primary text-sm font-medium"
               >
-                About
+                About Us
               </a>
               <a
                 href="#contact"
                 className="block px-3 py-2 text-black-lite hover:text-primary text-sm font-medium"
               >
-                Contact
+                Contact Us
               </a>
               <div className="border-t border-slate-200 pt-4">
                 <button className="block w-full text-left px-3 py-2 text-black-lite hover:text-primary text-sm font-medium">
                   Sign In
                 </button>
                 <button className="block w-full mt-2 mx-3 btn-contained text-sm font-medium px-3 py-2">
-                  Post A Job
+                  Hire & Partner
                 </button>
               </div>
             </div>

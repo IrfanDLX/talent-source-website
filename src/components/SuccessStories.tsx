@@ -19,7 +19,7 @@ const SuccessStories: React.FC = () => {
           {successStories.map((story) => (
             <div
               key={story.id}
-              className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden border border-slate-100 hover:border-blue-200 group"
+              className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden border border-slate-100 hover:border-gold-light group"
             >
               <div className="md:flex h-full">
                 <div className="md:w-1/3">

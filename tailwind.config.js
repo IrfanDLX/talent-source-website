@@ -17,6 +17,10 @@ export default {
           800: "var(--color-primary-800)",
           900: "var(--color-primary-900)",
         },
+        gold: {
+          DEFAULT: "var(--dark-gold)",
+          light: "var(--light-gold)",
+        },
       },
     },
   },

@@ -111,7 +111,7 @@ const HowItWorks: React.FC<HowItWorksProps> = ({ audience = "employer" }) => {
                 {index < steps.length - 1 && (
                   <div className="hidden lg:block absolute top-16 left-full w-full h-0.5 bg-gradient-to-r from-slate-200 to-transparent z-0"></div>
                 )}
-                <div className="relative h-full bg-white/70 backdrop-blur-lg rounded-xl p-6 text-center border border-slate-100 hover:border-blue-200 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 z-10">
+                <div className="relative h-full bg-white/70 backdrop-blur-lg rounded-xl p-6 text-center border border-slate-100 hover:border-gold-light hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 z-10">
                   <div
                     className={`w-16 h-16 bg-slate-100 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}
                   >
