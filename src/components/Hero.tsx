@@ -11,6 +11,14 @@ const Hero: React.FC = () => {
 
   return (
     <main className="hero-bg min-h-[calc(100vh-120px)] flex items-center justify-start">
+      <video autoPlay muted loop playsInline className="hero-video">
+        <source
+          src="https://talent-source-prod-bucket.lon1.digitaloceanspaces.com/assets/sale-page-banner-video.mp4"
+          type="video/mp4"
+        />
+      </video>
+      <div className="hero-overlay"></div>
+      <div className="hero-content"></div>
       <div className="relative z-10 max-w-7xl mx-auto py-20 text-left px-4 sm:px-6 lg:px-8">
         <div className="">
           {/* <!-- Main Heading --> */}
@@ -30,7 +38,7 @@ const Hero: React.FC = () => {
               <input
                 type="text"
                 placeholder="Search for skills, roles, or companies..."
-                className="w-full py-3 px-5 pr-16 bg-transparent text-white placeholder-slate-500 focus:outline-none rounded-xl text-base"
+                className="w-full py-3 px-5 pr-16 bg-white text-white placeholder-slate-500 focus:outline-none rounded-xl text-base"
               />
               <button className="absolute right-2 top-1/2 -translate-y-1/2 p-2 bg-primary hover:bg-white/20 transition-colors rounded-lg shadow-lg">
                 <svg
