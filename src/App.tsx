@@ -3,15 +3,10 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import RecentJobs from './components/RecentJobs';
 import JobListings from './components/JobListings';
-import JobsBySource from './components/JobsBySource';
-import FeaturedCategories from './components/FeaturedCategories';
-import HowItWorks from './components/HowItWorks';
+import MissionStatement from './components/MissionStatement';
 import WhyChooseUs from './components/WhyChooseUs';
 import Testimonials from './components/Testimonials';
-import SuccessStories from './components/SuccessStories';
 import Partners from './components/Partners';
-import Blog from './components/Blog';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
 import TrustedCompanies from './components/TrustedCompanies';
 
@@ -23,6 +18,9 @@ function App() {
         <Hero />
         <RecentJobs />
         <JobListings />
+        <MissionStatement />
+        <WhyChooseUs />
+        <Testimonials />
         <TrustedCompanies />
         <Partners />
       </main>
