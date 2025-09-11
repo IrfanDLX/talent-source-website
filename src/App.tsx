@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import RecentJobs from './components/RecentJobs';
+import JobListings from './components/JobListings';
 import JobsBySource from './components/JobsBySource';
 import FeaturedCategories from './components/FeaturedCategories';
 import HowItWorks from './components/HowItWorks';
@@ -21,6 +22,7 @@ function App() {
       <main>
         <Hero />
         <RecentJobs />
+        <JobListings />
         <TrustedCompanies />
         <Partners />
       </main>
