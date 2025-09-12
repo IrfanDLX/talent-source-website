@@ -1,24 +1,27 @@
 import React, { useEffect, useState } from "react";
 import { Search, Menu, X } from "lucide-react";
 
-const Header: React.FC = () => {
+interface HeaderProps {
+  currentPage: string;
+  setCurrentPage: (page: string) => void;
+}
+
+const Header: React.FC<HeaderProps> = ({ currentPage, setCurrentPage }) => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [active, setActive] = useState("home");
 
   const navItems = [
     { id: "home", label: "Home", href: "#home" },
     { id: "jobs", label: "Jobs", href: "#jobs" },
+    { id: "insights", label: "Insights", href: "#insights" },
     { id: "about", label: "About Us", href: "#about" },
     { id: "contact", label: "Contact Us", href: "#contact" },
   ];
 
   useEffect(() => {
-    // 1️⃣ Set initial active from URL hash (if any)
-    const hash = window.location.hash.replace("#", "");
-    if (hash) {
-      setActive(hash);
-    }
-  }, []);
+    setActive(currentPage);
+  }, [currentPage]);
+
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -41,14 +44,17 @@ const Header: React.FC = () => {
                 href={item.href}
                 onClick={(e) => {
                   e.preventDefault(); // prevent default jump
-                  setActive(item.id); // set active immediately
+                  setActive(item.id);
+                  setCurrentPage(item.id);
 
-                  const section = document.querySelector(item.href);
-                  if (section) {
-                    section.scrollIntoView({
-                      behavior: "smooth",
-                      block: "start",
-                    });
+                  if (item.id === 'home') {
+                    const section = document.querySelector(item.href);
+                    if (section) {
+                      section.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start",
+                      });
+                    }
                   }
                 }}
                 className={`nav-item text-black-lite ${active === item.id ? "active" : ""}`}
@@ -87,30 +93,18 @@ const Header: React.FC = () => {
         {isMenuOpen && (
           <div className="md:hidden border-t border-slate-200">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              <a
-                href="#"
-                className="block px-3 py-2 text-black-lite hover:text-primary text-sm font-medium"
-              >
-                Home
-              </a>
-              <a
-                href="#job"
-                className="block px-3 py-2 text-black-lite hover:text-primary text-sm font-medium"
-              >
-                Jobs
-              </a>
-              <a
-                href="#about"
-                className="block px-3 py-2 text-black-lite hover:text-primary text-sm font-medium"
-              >
-                About Us
-              </a>
-              <a
-                href="#contact"
-                className="block px-3 py-2 text-black-lite hover:text-primary text-sm font-medium"
-              >
-                Contact Us
-              </a>
+              {navItems.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => {
+                    setCurrentPage(item.id);
+                    setIsMenuOpen(false);
+                  }}
+                  className="block w-full text-left px-3 py-2 text-black-lite hover:text-primary text-sm font-medium"
+                >
+                  {item.label}
+                </button>
+              ))}
               <div className="border-t border-slate-200 pt-4">
                 <button className="block w-full text-left px-3 py-2 text-black-lite hover:text-primary text-sm font-medium">
                   Sign In

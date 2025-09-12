@@ -9,20 +9,37 @@ import Testimonials from './components/Testimonials';
 import Partners from './components/Partners';
 import Footer from './components/Footer';
 import TrustedCompanies from './components/TrustedCompanies';
+import InsightsListing from './components/InsightsListing';
 
 function App() {
+  // Simple routing state - in a real app, you'd use React Router
+  const [currentPage, setCurrentPage] = React.useState('home');
+
+  const renderPage = () => {
+    switch (currentPage) {
+      case 'insights':
+        return <InsightsListing />;
+      default:
+        return (
+          <>
+            <Hero />
+            <RecentJobs />
+            <JobListings />
+            <MissionStatement />
+            <WhyChooseUs />
+            <Testimonials />
+            <TrustedCompanies />
+            <Partners />
+          </>
+        );
+    }
+  };
+
   return (
     <div className="min-h-screen">
-      <Header />
+      <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />
       <main>
-        <Hero />
-        <RecentJobs />
-        <JobListings />
-        <MissionStatement />
-        <WhyChooseUs />
-        <Testimonials />
-        <TrustedCompanies />
-        <Partners />
+        {renderPage()}
       </main>
       <Footer />
     </div>
