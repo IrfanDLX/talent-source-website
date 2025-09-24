@@ -15,6 +15,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, setCurrentPage }) => {
     { id: "jobs", label: "Jobs", href: "#jobs" },
     { id: "insights", label: "Insights", href: "#insights" },
     { id: "about", label: "About Us", href: "#about" },
+    { id: "faq", label: "FAQ", href: "#faq" },
     { id: "contact", label: "Contact Us", href: "#contact" },
   ];
 

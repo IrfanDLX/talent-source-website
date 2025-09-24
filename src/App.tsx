@@ -10,6 +10,7 @@ import Partners from './components/Partners';
 import Footer from './components/Footer';
 import TrustedCompanies from './components/TrustedCompanies';
 import InsightsListing from './components/InsightsListing';
+import FAQ from './components/FAQ';
 
 function App() {
   // Simple routing state - in a real app, you'd use React Router
@@ -29,6 +30,7 @@ function App() {
             <WhyChooseUs />
             <Testimonials />
             <TrustedCompanies />
+            <FAQ />
             <Partners />
           </>
         );
