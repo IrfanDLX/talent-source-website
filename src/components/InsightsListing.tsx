@@ -76,18 +76,11 @@ const InsightsListing: React.FC = () => {
                 <h1 className="text-3xl lg:text-4xl font-bold mb-4 leading-tight">
                   Career Insights & Resources
                 </h1>
-                <p className="text-blue-100 text-lg mb-6 leading-relaxed">
+                <p className="text-black text-lg mb-6 leading-relaxed">
                   Expert advice, industry trends, and actionable tips to accelerate your career growth. 
                   Stay ahead of the curve with insights from industry leaders and career experts.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <button className="bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
-                    Browse All Insights
-                  </button>
-                  <button className="border-2 border-white text-white hover:bg-white hover:text-slate-900 px-6 py-3 rounded-lg font-semibold transition-colors">
-                    Subscribe to Updates
-                  </button>
-                </div>
+              
               </div>
             </div>
 
