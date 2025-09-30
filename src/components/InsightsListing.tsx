@@ -92,13 +92,13 @@ const InsightsListing: React.FC = () => {
                   <div className="flex gap-2">
                     <button
                       onClick={prevSlide}
-                      className="p-2 bg-white/10 hover:bg-white/20 rounded-lg transition-colors"
+                      className="p-2 border bg-white/10 hover:bg-white/20 rounded-lg transition-colors"
                     >
                       <ChevronLeft className="h-4 w-4 text-primary" />
                     </button>
                     <button
                       onClick={nextSlide}
-                      className="p-2 bg-white/10 hover:bg-white/20 rounded-lg transition-colors"
+                      className="p-2 border bg-white/10 hover:bg-white/20 rounded-lg transition-colors"
                     >
                       <ChevronRight className="h-4 w-4 text-primary" />
                     </button>
