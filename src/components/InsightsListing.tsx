@@ -68,11 +68,11 @@ const InsightsListing: React.FC = () => {
     <section className="py-12 bg-slate-50 min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* New Banner Design */}
-        <div className="bg-white overflow-hidden mb-12">
+        <div className="bg-slate-50 overflow-hidden mb-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[400px]">
             {/* Left Side - Text Content */}
             <div className="flex items-center p-8 lg:p-12">
-              <div className="text-white">
+              <div className="">
                 <h1 className="text-3xl lg:text-4xl font-bold mb-4 leading-tight">
                   Career Insights & Resources
                 </h1>
