@@ -94,13 +94,13 @@ const InsightsListing: React.FC = () => {
                       onClick={prevSlide}
                       className="p-2 bg-white/10 hover:bg-white/20 rounded-lg transition-colors"
                     >
-                      <ChevronLeft className="h-4 w-4 text-white" />
+                      <ChevronLeft className="h-4 w-4 text-primary" />
                     </button>
                     <button
                       onClick={nextSlide}
                       className="p-2 bg-white/10 hover:bg-white/20 rounded-lg transition-colors"
                     >
-                      <ChevronRight className="h-4 w-4 text-white" />
+                      <ChevronRight className="h-4 w-4 text-primary" />
                     </button>
                   </div>
                 </div>
@@ -161,8 +161,8 @@ const InsightsListing: React.FC = () => {
                       onClick={() => setCurrentSlide(index)}
                       className={`w-2 h-2 rounded-full transition-all duration-200 ${
                         index === currentSlide
-                          ? 'bg-amber-500 scale-125'
-                          : 'bg-white/30 hover:bg-white/50'
+                          ? 'bg-primary scale-125'
+                          : 'bg-black/30 hover:bg-black/50'
                       }`}
                     />
                   ))}
