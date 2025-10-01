@@ -89,24 +89,26 @@ const InsightsListing: React.FC = () => {
               <div className="w-full">
                 <div className="flex items-center justify-between mb-6">
                   <h3 className="text-xl font-bold text-white">Featured Insights</h3>
-                  <div className="flex gap-2">
-                    <button
-                      onClick={prevSlide}
-                      className="p-2 border bg-white/10 hover:bg-white/20 rounded-lg transition-colors"
-                    >
-                      <ChevronLeft className="h-4 w-4 text-primary" />
-                    </button>
-                    <button
-                      onClick={nextSlide}
-                      className="p-2 border bg-white/10 hover:bg-white/20 rounded-lg transition-colors"
-                    >
-                      <ChevronRight className="h-4 w-4 text-primary" />
-                    </button>
-                  </div>
                 </div>
 
-                <div className="relative overflow-hidden rounded-xl">
-                  <div 
+                <div className="relative overflow-hidden rounded-xl group">
+                  {/* Previous Button - Centered */}
+                  <button
+                    onClick={prevSlide}
+                    className="absolute left-2 top-1/2 -translate-y-1/2 z-10 p-2 border bg-white/90 hover:bg-white rounded-full transition-all shadow-lg opacity-0 group-hover:opacity-100"
+                  >
+                    <ChevronLeft className="h-5 w-5 text-slate-900" />
+                  </button>
+
+                  {/* Next Button - Centered */}
+                  <button
+                    onClick={nextSlide}
+                    className="absolute right-2 top-1/2 -translate-y-1/2 z-10 p-2 border bg-white/90 hover:bg-white rounded-full transition-all shadow-lg opacity-0 group-hover:opacity-100"
+                  >
+                    <ChevronRight className="h-5 w-5 text-slate-900" />
+                  </button>
+
+                  <div
                     className="flex transition-transform duration-300 ease-in-out"
                     style={{ transform: `translateX(-${currentSlide * 100}%)` }}
                   >
