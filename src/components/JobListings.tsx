@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { MapPin, Clock, ExternalLink, ChevronLeft, ChevronRight, Bookmark, Search, TrendingUp, Users, Briefcase, Star } from "lucide-react";
+import { MapPin, Clock, ExternalLink, ChevronLeft, ChevronRight, Bookmark, Search, TrendingUp, Users, Briefcase, Star, Shield, Zap, Award } from "lucide-react";
 import { recentJobs } from "../data/mockData";
 
 const jobStats = [
