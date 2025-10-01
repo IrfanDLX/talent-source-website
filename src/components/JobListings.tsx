@@ -405,6 +405,16 @@ const JobListings: React.FC = () => {
             >
               Design 2
             </button>
+            <button
+              onClick={() => setBannerDesign('design3')}
+              className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${
+                bannerDesign === 'design3'
+                  ? 'bg-primary text-white'
+                  : 'text-black-lite hover:bg-slate-50'
+              }`}
+            >
+              Design 2
+            </button>
           </div>
         </div>
 
