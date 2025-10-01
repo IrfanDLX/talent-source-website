@@ -39,7 +39,7 @@ const JobListings: React.FC = () => {
   const [searchKeyword, setSearchKeyword] = useState("");
   const [searchLocation, setSearchLocation] = useState("");
   const [currentStat, setCurrentStat] = useState(0);
-  const [bannerDesign, setBannerDesign] = useState<'design1' | 'design2'>('design1');
+  const [bannerDesign, setBannerDesign] = useState<'design1' | 'design2' | 'design3'>('design1');
   const jobsPerPage = 6;
   
   // Calculate pagination
