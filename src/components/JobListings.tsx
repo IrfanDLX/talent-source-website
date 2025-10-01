@@ -409,7 +409,9 @@ const JobListings: React.FC = () => {
         </div>
 
         {/* Render Selected Banner Design */}
-        {bannerDesign === 'design1' ? renderBannerDesign1() : renderBannerDesign2()}
+        {bannerDesign === 'design1' ? renderBannerDesign1() : 
+         bannerDesign === 'design2' ? renderBannerDesign2() : 
+         renderBannerDesign3()}
 
         {/* Job Cards - One per row */}
         <div className="space-y-6">
