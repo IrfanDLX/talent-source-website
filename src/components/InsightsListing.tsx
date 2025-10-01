@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Calendar, Clock, ArrowRight, Search, Filter, Eye, Share2, Bookmark, ChevronLeft, ChevronRight } from 'lucide-react';
 import { blogPosts } from '../data/mockData';
 
@@ -36,8 +36,16 @@ const InsightsListing: React.FC = () => {
   const [selectedInsight, setSelectedInsight] = useState<any>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % featuredInsights.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   const filteredInsights = blogPosts.filter(post => {
-    const matchesCategory = selectedCategory === 'all' || 
+    const matchesCategory = selectedCategory === 'all' ||
       post.category.toLowerCase().replace(' ', '-') === selectedCategory;
     const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
       post.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
