@@ -88,142 +88,328 @@ const JobListings: React.FC = () => {
     }
   };
 
-  return (
-    <section className="py-12 bg-slate-50" id="job-listings">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* New Banner Design */}
-        <div className="bg-gradient-to-br from-blue-800 via-blue-900 to-slate-900 rounded-2xl overflow-hidden mb-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[500px]">
-            {/* Left Side - Text Content & Search */}
-            <div className="flex items-center p-8 lg:p-12">
-              <div className="w-full">
-                <h1 className="text-3xl lg:text-4xl font-bold mb-4 leading-tight text-white">
-                  Find Your Perfect Job Match
-                </h1>
-                <p className="text-blue-100 text-lg mb-8 leading-relaxed">
-                  Discover thousands of opportunities from top companies worldwide. 
-                  Search by keywords, location, and find the career that matches your aspirations.
-                </p>
+  const renderBannerDesign1 = () => (
+    <div className="bg-gradient-to-br from-blue-800 via-blue-900 to-slate-900 rounded-2xl overflow-hidden mb-12">
+      <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[500px]">
+        {/* Left Side - Text Content & Search */}
+        <div className="flex items-center p-8 lg:p-12">
+          <div className="w-full">
+            <h1 className="text-3xl lg:text-4xl font-bold mb-4 leading-tight text-white">
+              Find Your Perfect Job Match
+            </h1>
+            <p className="text-blue-100 text-lg mb-8 leading-relaxed">
+              Discover thousands of opportunities from top companies worldwide. 
+              Search by keywords, location, and find the career that matches your aspirations.
+            </p>
 
-                {/* Enhanced Search Section */}
-                <div className="space-y-4 mb-8">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {/* Keyword Search */}
-                    <div className="relative">
-                      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                        <Search className="h-5 w-5 text-slate-400" />
-                      </div>
-                      <input
-                        type="text"
-                        placeholder="Job title, skills, or company"
-                        value={searchKeyword}
-                        onChange={(e) => setSearchKeyword(e.target.value)}
-                        className="w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all"
-                      />
-                    </div>
-
-                    {/* Location Search */}
-                    <div className="relative">
-                      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                        <MapPin className="h-5 w-5 text-slate-400" />
-                      </div>
-                      <input
-                        type="text"
-                        placeholder="City, state, or remote"
-                        value={searchLocation}
-                        onChange={(e) => setSearchLocation(e.target.value)}
-                        className="w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all"
-                      />
-                    </div>
+            {/* Enhanced Search Section */}
+            <div className="space-y-4 mb-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {/* Keyword Search */}
+                <div className="relative">
+                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <Search className="h-5 w-5 text-slate-400" />
                   </div>
-
-                  <button
-                    onClick={handleSearch}
-                    className="w-full md:w-auto bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
-                  >
-                    <Search className="h-5 w-5" />
-                    Search Jobs
-                  </button>
+                  <input
+                    type="text"
+                    placeholder="Job title, skills, or company"
+                    value={searchKeyword}
+                    onChange={(e) => setSearchKeyword(e.target.value)}
+                    className="w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all"
+                  />
                 </div>
 
-                {/* Quick Stats */}
-                <div className="grid grid-cols-2 gap-4 text-center">
-                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-                    <div className="text-2xl font-bold text-white">12,500+</div>
-                    <div className="text-blue-200 text-sm">Active Jobs</div>
+                {/* Location Search */}
+                <div className="relative">
+                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <MapPin className="h-5 w-5 text-slate-400" />
                   </div>
-                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-                    <div className="text-2xl font-bold text-white">2,800+</div>
-                    <div className="text-blue-200 text-sm">Companies</div>
+                  <input
+                    type="text"
+                    placeholder="City, state, or remote"
+                    value={searchLocation}
+                    onChange={(e) => setSearchLocation(e.target.value)}
+                    className="w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all"
+                  />
+                </div>
+              </div>
+
+              <button
+                onClick={handleSearch}
+                className="w-full md:w-auto bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
+              >
+                <Search className="h-5 w-5" />
+                Search Jobs
+              </button>
+            </div>
+
+            {/* Quick Stats */}
+            <div className="grid grid-cols-2 gap-4 text-center">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+                <div className="text-2xl font-bold text-white">12,500+</div>
+                <div className="text-blue-200 text-sm">Active Jobs</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+                <div className="text-2xl font-bold text-white">2,800+</div>
+                <div className="text-blue-200 text-sm">Companies</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Right Side - Job Statistics & Features */}
+        <div className="relative bg-white/5 backdrop-blur-sm p-6 lg:p-8 flex items-center">
+          <div className="w-full">
+            <div className="mb-8">
+              <h3 className="text-xl font-bold text-white mb-6">Platform Statistics</h3>
+              
+              {/* Rotating Stats Display */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 mb-6">
+                <div className="text-center">
+                  <div className={`w-16 h-16 bg-gradient-to-br ${jobStats[currentStat].color} rounded-xl flex items-center justify-center mx-auto mb-4`}>
+                    {React.createElement(jobStats[currentStat].icon, { className: "h-8 w-8 text-white" })}
+                  </div>
+                  <div className="text-3xl font-bold text-white mb-2">
+                    {jobStats[currentStat].value}
+                  </div>
+                  <div className="text-blue-200">
+                    {jobStats[currentStat].title}
                   </div>
                 </div>
               </div>
+
+              {/* Stats Indicators */}
+              <div className="flex justify-center space-x-2 mb-6">
+                {jobStats.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentStat(index)}
+                    className={`w-2 h-2 rounded-full transition-all duration-200 ${
+                      index === currentStat
+                        ? 'bg-amber-500 scale-125'
+                        : 'bg-white/30 hover:bg-white/50'
+                    }`}
+                  />
+                ))}
+              </div>
             </div>
 
-            {/* Right Side - Job Statistics & Features */}
-            <div className="relative bg-white/5 backdrop-blur-sm p-6 lg:p-8 flex items-center">
-              <div className="w-full">
-                <div className="mb-8">
-                  <h3 className="text-xl font-bold text-white mb-6">Platform Statistics</h3>
-                  
-                  {/* Rotating Stats Display */}
-                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 mb-6">
-                    <div className="text-center">
-                      <div className={`w-16 h-16 bg-gradient-to-br ${jobStats[currentStat].color} rounded-xl flex items-center justify-center mx-auto mb-4`}>
-                        {React.createElement(jobStats[currentStat].icon, { className: "h-8 w-8 text-white" })}
-                      </div>
-                      <div className="text-3xl font-bold text-white mb-2">
-                        {jobStats[currentStat].value}
-                      </div>
-                      <div className="text-blue-200">
-                        {jobStats[currentStat].title}
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Stats Indicators */}
-                  <div className="flex justify-center space-x-2 mb-6">
-                    {jobStats.map((_, index) => (
-                      <button
-                        key={index}
-                        onClick={() => setCurrentStat(index)}
-                        className={`w-2 h-2 rounded-full transition-all duration-200 ${
-                          index === currentStat
-                            ? 'bg-amber-500 scale-125'
-                            : 'bg-white/30 hover:bg-white/50'
-                        }`}
-                      />
-                    ))}
-                  </div>
+            {/* Feature Highlights */}
+            <div className="space-y-4">
+              <h4 className="text-lg font-semibold text-white mb-4">Why Choose Our Platform?</h4>
+              
+              <div className="space-y-3">
+                <div className="flex items-center gap-3 text-blue-100">
+                  <div className="w-2 h-2 bg-amber-500 rounded-full"></div>
+                  <span className="text-sm">Verified job postings from trusted companies</span>
                 </div>
-
-                {/* Feature Highlights */}
-                <div className="space-y-4">
-                  <h4 className="text-lg font-semibold text-white mb-4">Why Choose Our Platform?</h4>
-                  
-                  <div className="space-y-3">
-                    <div className="flex items-center gap-3 text-blue-100">
-                      <div className="w-2 h-2 bg-amber-500 rounded-full"></div>
-                      <span className="text-sm">Verified job postings from trusted companies</span>
-                    </div>
-                    <div className="flex items-center gap-3 text-blue-100">
-                      <div className="w-2 h-2 bg-amber-500 rounded-full"></div>
-                      <span className="text-sm">Advanced filtering and search capabilities</span>
-                    </div>
-                    <div className="flex items-center gap-3 text-blue-100">
-                      <div className="w-2 h-2 bg-amber-500 rounded-full"></div>
-                      <span className="text-sm">Real-time job alerts and notifications</span>
-                    </div>
-                    <div className="flex items-center gap-3 text-blue-100">
-                      <div className="w-2 h-2 bg-amber-500 rounded-full"></div>
-                      <span className="text-sm">One-click application process</span>
-                    </div>
-                  </div>
+                <div className="flex items-center gap-3 text-blue-100">
+                  <div className="w-2 h-2 bg-amber-500 rounded-full"></div>
+                  <span className="text-sm">Advanced filtering and search capabilities</span>
+                </div>
+                <div className="flex items-center gap-3 text-blue-100">
+                  <div className="w-2 h-2 bg-amber-500 rounded-full"></div>
+                  <span className="text-sm">Real-time job alerts and notifications</span>
+                </div>
+                <div className="flex items-center gap-3 text-blue-100">
+                  <div className="w-2 h-2 bg-amber-500 rounded-full"></div>
+                  <span className="text-sm">One-click application process</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  );
+
+  const renderBannerDesign2 = () => (
+    <div className="relative overflow-hidden rounded-2xl mb-12">
+      {/* Background with overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-blue-900 to-purple-900"></div>
+      <div className="absolute inset-0 bg-black/20"></div>
+      
+      {/* Decorative elements */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-amber-500/20 to-transparent rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-tr from-blue-500/20 to-transparent rounded-full blur-2xl"></div>
+      
+      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 min-h-[600px]">
+        {/* Left Side - Content */}
+        <div className="flex items-center p-8 lg:p-12">
+          <div className="w-full">
+            <div className="inline-flex items-center bg-amber-500/20 text-amber-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <Star className="h-4 w-4 mr-2" />
+              #1 Job Platform
+            </div>
+            
+            <h1 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+              <span className="text-white">Discover Your</span>
+              <br />
+              <span className="bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">
+                Dream Career
+              </span>
+            </h1>
+            
+            <p className="text-slate-300 text-lg mb-8 leading-relaxed max-w-lg">
+              Connect with top employers and unlock opportunities that match your skills, 
+              passion, and career goals. Your next big break is just a search away.
+            </p>
+
+            {/* Advanced Search */}
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 mb-8">
+              <h3 className="text-white font-semibold mb-4 flex items-center gap-2">
+                <Search className="h-5 w-5" />
+                Find Your Perfect Match
+              </h3>
+              
+              <div className="space-y-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="relative">
+                    <input
+                      type="text"
+                      placeholder="What position are you looking for?"
+                      value={searchKeyword}
+                      onChange={(e) => setSearchKeyword(e.target.value)}
+                      className="w-full px-4 py-3 bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl text-white placeholder-slate-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all"
+                    />
+                    <Briefcase className="absolute right-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-slate-400" />
+                  </div>
+                  
+                  <div className="relative">
+                    <input
+                      type="text"
+                      placeholder="Where do you want to work?"
+                      value={searchLocation}
+                      onChange={(e) => setSearchLocation(e.target.value)}
+                      className="w-full px-4 py-3 bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl text-white placeholder-slate-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all"
+                    />
+                    <MapPin className="absolute right-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-slate-400" />
+                  </div>
+                </div>
+                
+                <button
+                  onClick={handleSearch}
+                  className="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
+                >
+                  <Search className="h-5 w-5" />
+                  Search 12,500+ Jobs
+                </button>
+              </div>
+            </div>
+
+            {/* Trust Indicators */}
+            <div className="flex items-center gap-6 text-slate-300">
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                <span className="text-sm">2,800+ Companies</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
+                <span className="text-sm">94% Success Rate</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Right Side - Interactive Features */}
+        <div className="relative p-8 lg:p-12 flex items-center">
+          <div className="w-full">
+            {/* Live Job Feed */}
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 mb-6">
+              <div className="flex items-center justify-between mb-4">
+                <h3 className="text-white font-semibold flex items-center gap-2">
+                  <TrendingUp className="h-5 w-5 text-green-400" />
+                  Live Job Feed
+                </h3>
+                <div className="flex items-center gap-1">
+                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                  <span className="text-green-400 text-xs">Live</span>
+                </div>
+              </div>
+              
+              <div className="space-y-3">
+                {recentJobs.slice(0, 3).map((job, index) => (
+                  <div key={job.id} className="flex items-center gap-3 p-3 bg-white/5 rounded-lg hover:bg-white/10 transition-colors cursor-pointer">
+                    <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center text-xs font-semibold text-white">
+                      {job.company.charAt(0)}
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="text-white text-sm font-medium truncate">{job.title}</div>
+                      <div className="text-slate-400 text-xs">{job.company}</div>
+                    </div>
+                    <div className="text-amber-400 text-xs font-medium">New</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Success Metrics */}
+            <div className="grid grid-cols-2 gap-4 mb-6">
+              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-4 border border-white/20 text-center">
+                <div className="text-2xl font-bold text-white mb-1">98%</div>
+                <div className="text-slate-300 text-xs">Job Match Rate</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-4 border border-white/20 text-center">
+                <div className="text-2xl font-bold text-white mb-1">24h</div>
+                <div className="text-slate-300 text-xs">Avg Response</div>
+              </div>
+            </div>
+
+            {/* Popular Categories */}
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
+              <h3 className="text-white font-semibold mb-4 flex items-center gap-2">
+                <Users className="h-5 w-5" />
+                Trending Categories
+              </h3>
+              
+              <div className="flex flex-wrap gap-2">
+                {['Technology', 'Healthcare', 'Finance', 'Marketing', 'Design', 'Sales'].map((category) => (
+                  <button
+                    key={category}
+                    className="px-3 py-1 bg-white/20 hover:bg-white/30 text-white text-sm rounded-full transition-colors border border-white/30"
+                  >
+                    {category}
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
+  return (
+    <section className="py-12 bg-slate-50" id="job-listings">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Design Toggle Button */}
+        <div className="flex justify-center mb-6">
+          <div className="bg-white rounded-lg p-1 shadow-sm border border-slate-200">
+            <button
+              onClick={() => setBannerDesign('design1')}
+              className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${
+                bannerDesign === 'design1'
+                  ? 'bg-primary text-white'
+                  : 'text-black-lite hover:bg-slate-50'
+              }`}
+            >
+              Design 1
+            </button>
+            <button
+              onClick={() => setBannerDesign('design2')}
+              className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${
+                bannerDesign === 'design2'
+                  ? 'bg-primary text-white'
+                  : 'text-black-lite hover:bg-slate-50'
+              }`}
+            >
+              Design 2
+            </button>
+          </div>
+        </div>
+
+        {/* Render Selected Banner Design */}
+        {bannerDesign === 'design1' ? renderBannerDesign1() : renderBannerDesign2()}
 
         {/* Job Cards - One per row */}
         <div className="space-y-6">
