@@ -12,15 +12,47 @@ import TrustedCompanies from './components/TrustedCompanies';
 import InsightsListing from './components/InsightsListing';
 import FAQ from './components/FAQ';
 import SuccessStories from './components/SuccessStories';
+import SalePage from './components/SalePage';
+import PaymentPage from './components/PaymentPage';
+import ThankYouPage from './components/ThankYouPage';
 
 function App() {
-  // Simple routing state - in a real app, you'd use React Router
   const [currentPage, setCurrentPage] = React.useState('home');
+  const [selectedPlan, setSelectedPlan] = React.useState<'basic' | 'gold'>('basic');
+
+  const handleSelectPlan = (plan: 'basic' | 'gold') => {
+    setSelectedPlan(plan);
+    setCurrentPage('payment');
+  };
+
+  const handlePaymentComplete = () => {
+    setCurrentPage('thankyou');
+  };
+
+  const handleGoHome = () => {
+    setCurrentPage('home');
+  };
+
+  const handleBackToSale = () => {
+    setCurrentPage('sale');
+  };
 
   const renderPage = () => {
     switch (currentPage) {
       case 'insights':
         return <InsightsListing />;
+      case 'sale':
+        return <SalePage onSelectPlan={handleSelectPlan} />;
+      case 'payment':
+        return (
+          <PaymentPage
+            selectedPlan={selectedPlan}
+            onBack={handleBackToSale}
+            onPaymentComplete={handlePaymentComplete}
+          />
+        );
+      case 'thankyou':
+        return <ThankYouPage selectedPlan={selectedPlan} onGoHome={handleGoHome} />;
       default:
         return (
           <>

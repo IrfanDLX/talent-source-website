@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Calendar, Clock, ArrowRight, Search, Filter, Eye, Share2, Bookmark } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Calendar, Clock, ArrowRight, Search, Filter, Eye, Share2, Bookmark, ChevronLeft, ChevronRight } from 'lucide-react';
 import { blogPosts } from '../data/mockData';
 
 const categories = [
@@ -34,9 +34,18 @@ const InsightsListing: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedInsight, setSelectedInsight] = useState<any>(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % featuredInsights.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   const filteredInsights = blogPosts.filter(post => {
-    const matchesCategory = selectedCategory === 'all' || 
+    const matchesCategory = selectedCategory === 'all' ||
       post.category.toLowerCase().replace(' ', '-') === selectedCategory;
     const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
       post.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
@@ -51,6 +60,14 @@ const InsightsListing: React.FC = () => {
     setSelectedInsight(null);
   };
 
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % featuredInsights.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + featuredInsights.length) % featuredInsights.length);
+  };
+
   if (selectedInsight) {
     return <InsightDetail insight={selectedInsight} onBack={handleBackToList} />;
   }
@@ -58,56 +75,116 @@ const InsightsListing: React.FC = () => {
   return (
     <section className="py-12 bg-slate-50 min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="ts-text-h2 font-bold text-black-lite mb-2">
-            Career Insights & Resources
-          </h1>
-          <p className="ts-p-text text-black-lite max-w-2xl mx-auto">
-            Expert advice, industry trends, and actionable tips to accelerate your career growth
-          </p>
+        {/* New Banner Design */}
+        <div className="bg-slate-50 overflow-hidden mb-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[400px]">
+            {/* Left Side - Text Content */}
+            <div className="flex items-center p-8 lg:p-12">
+              <div className="">
+                <h1 className="text-3xl lg:text-4xl font-bold mb-4 leading-tight">
+                  Career Insights & Resources
+                </h1>
+                <p className="text-black text-lg mb-6 leading-relaxed">
+                  Expert advice, industry trends, and actionable tips to accelerate your career growth. 
+                  Stay ahead of the curve with insights from industry leaders and career experts.
+                </p>
+              
+              </div>
+            </div>
+
+            {/* Right Side - Featured Insights Slider */}
+            <div className="relative bg-white/5 backdrop-blur-sm p-6 lg:p-8 flex items-center">
+              <div className="w-full">
+                <div className="flex items-center justify-between mb-6">
+                  <h3 className="text-xl font-bold text-white">Featured Insights</h3>
+                </div>
+
+                <div className="relative overflow-hidden rounded-xl group">
+                  {/* Previous Button - Centered */}
+                  <button
+                    onClick={prevSlide}
+                    className="absolute left-2 top-1/2 -translate-y-1/2 z-10 p-2 border bg-white/90 hover:bg-white rounded-full transition-all shadow-lg opacity-0 group-hover:opacity-100"
+                  >
+                    <ChevronLeft className="h-5 w-5 text-slate-900" />
+                  </button>
+
+                  {/* Next Button - Centered */}
+                  <button
+                    onClick={nextSlide}
+                    className="absolute right-2 top-1/2 -translate-y-1/2 z-10 p-2 border bg-white/90 hover:bg-white rounded-full transition-all shadow-lg opacity-0 group-hover:opacity-100"
+                  >
+                    <ChevronRight className="h-5 w-5 text-slate-900" />
+                  </button>
+
+                  <div
+                    className="flex transition-transform duration-300 ease-in-out"
+                    style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                  >
+                    {featuredInsights.map((insight) => (
+                      <div
+                        key={insight.id}
+                        className="w-full flex-shrink-0 cursor-pointer"
+                        onClick={() => handleInsightClick(insight)}
+                      >
+                        <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                          <div className="relative">
+                            <img
+                              src={insight.image}
+                              alt={insight.title}
+                              className="w-full h-48 object-cover"
+                            />
+                            <div className="absolute top-3 left-3">
+                              <span className="bg-amber-500 text-white px-3 py-1 rounded-full text-xs font-medium">
+                                Featured
+                              </span>
+                            </div>
+                          </div>
+                          <div className="p-6">
+                            <h4 className="font-bold text-black-lite text-lg mb-2 line-clamp-2">
+                              {insight.title}
+                            </h4>
+                            <p className="text-black-lite text-sm mb-4 line-clamp-2">
+                              {insight.excerpt}
+                            </p>
+                            <div className="flex items-center justify-between text-xs text-black-lite">
+                              <div className="flex items-center">
+                                <Calendar className="h-3 w-3 mr-1" />
+                                <span>{new Date(insight.publishDate).toLocaleDateString()}</span>
+                              </div>
+                              <div className="flex items-center">
+                                <Clock className="h-3 w-3 mr-1" />
+                                <span>{insight.readTime}</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Slide Indicators */}
+                <div className="flex justify-center mt-4 space-x-2">
+                  {featuredInsights.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentSlide(index)}
+                      className={`w-2 h-2 rounded-full transition-all duration-200 ${
+                        index === currentSlide
+                          ? 'bg-primary scale-125'
+                          : 'bg-black/30 hover:bg-black/50'
+                      }`}
+                    />
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="lg:flex lg:gap-8">
           {/* Left Sidebar - Categories (Desktop) / Top Section (Mobile) */}
           <div className="lg:w-1/4 mb-8 lg:mb-0">
-            {/* Featured Insights */}
-            <div className="bg-white rounded-xl shadow-sm border border-slate-100 p-6 mb-6">
-              <h3 className="text-lg font-bold text-black-lite mb-4 flex items-center gap-2">
-                <span className="w-2 h-2 bg-primary rounded-full"></span>
-                Featured Insights
-              </h3>
-              <div className="space-y-4">
-                {featuredInsights.map((insight) => (
-                  <div
-                    key={insight.id}
-                    className="group cursor-pointer"
-                    onClick={() => handleInsightClick(insight)}
-                  >
-                    <div className="relative overflow-hidden rounded-lg mb-3">
-                      <img
-                        src={insight.image}
-                        alt={insight.title}
-                        className="w-full h-32 object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                      <div className="absolute top-2 left-2">
-                        <span className="bg-primary text-white px-2 py-1 rounded-full text-xs font-medium">
-                          Featured
-                        </span>
-                      </div>
-                    </div>
-                    <h4 className="font-semibold text-black-lite text-sm mb-2 group-hover:text-primary transition-colors line-clamp-2">
-                      {insight.title}
-                    </h4>
-                    <div className="flex items-center text-xs text-black-lite">
-                      <Clock className="h-3 w-3 mr-1" />
-                      <span>{insight.readTime}</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
             {/* Categories */}
             <div className="bg-white rounded-xl shadow-sm border border-slate-100 p-6">
               <h3 className="text-lg font-bold text-black-lite mb-4">Categories</h3>
